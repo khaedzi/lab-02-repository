@@ -1,37 +1,45 @@
 <!DOCTYPE html>
 <html>
+  <head>
+    <meta charset="utf-8">
+    <title>Events and Delegation</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/layouts.css">
+  </head>
+  <body>
+    <header>
+      <div class="container p-32">
+        <h1 class="margin-lt-8">Image Gallery</h1>
+        <br>
+        <button id="page1_btn">Page 1</button>
+        <button id="page2_btn">Page 2</button>
+        <button id="sortTitle_btn">Sort By Tilte</button>
+        <button id="sortHorn_btn">Sort By Number of horns</button>
+        <br>
+        <select id="filter" class="margin-lt-8"  name="name">
+          <option id="select-kind">select kind</option>
+        </select>
+      </div>
+    </header>
+<!--render ll img + his informations -->
+    <section id="template" class="template margin-lt-8 padding-ltr-8" type="text/x-tmpl-mustache">
+      <h2>{{title}}</h2>
+      <br>
+      <img src={{image_url}} alt="">
+      <br>
+      <br>
+      <p>{{description}}</p>
+      <br>
+    </section>
 
-<head>
-    <title>The Gallery of Horns</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="css/style.css">
-<link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&display=swap" rel="stylesheet">
-</head>
-
-
-    <body>
-
-        <header>
-            <h1>Code fellows</h1>
-            <select value="" name="name" id="keywords"></select>
-          </header>
-      <div class="clearfix">
-          <main>
-            
-      
-            
-            <section class="template">
-              <h2></h2>
-              <img src="" alt="">
-              <p></p>
-            </section>
-      
-          </main>
-        </div>
-          <footer>2020 &copy;</footer>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="js/app.js"></script>
-</body>
-
+    <main>
+      <div class="main-container">
+      </div>
+    </main>
+    <footer><p>2020 &copy;</p> </footer>
+    <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
+    <script src="https://unpkg.com/mustache@latest"></script>
+    <script type="text/javascript" src="js/app.js"></script>
+  </body>
 </html>
