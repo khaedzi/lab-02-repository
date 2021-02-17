@@ -78,6 +78,7 @@ function renderKeywordsOption(url) {
     $('select').on('change', clickHandler);
   });
 }
+console.log("Ss");
 function getSet(array) {
   var arraySet = new Set(array);
   return Array.from(arraySet);
